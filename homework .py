@@ -1,9 +1,17 @@
-text = "Hello"
-num = 3
-pi = 3.14
-ok = True
+# Get input from the user
+user_input = input("Enter a number: ")
 
-print(len(text))
-print(text.upper())
-print(text[0:3])
-print(text + " World")
+# Convert the input to a float (to handle decimal numbers)
+try:
+    number = float(user_input)
+
+    # Use conditional statements to check the number's value
+    if number > 0:
+        print(f"The number {number} is positive.")
+    elif number < 0:
+        print(f"The number {number} is negative.")
+    else:
+        print(f"The number {number} is zero.")
+
+except ValueError:
+    print("Invalid input. Please enter a valid number.")
